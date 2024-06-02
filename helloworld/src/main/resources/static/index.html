@@ -8,64 +8,60 @@
 
     <link rel='stylesheet' href='/webjars/bootstrap/css/bootstrap.min.css'>
     <script>
-        function calculate() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const operation = document.getElementById('operation').value;
-            let result;
-            switch(operation) {
-                case 'sum':
-                    result = num1 + num2;
-                    break;
-                case 'sub':
-                    result = num1 - num2;
-                    break;
-                case 'mul':
-                    result = num1 * num2;
-                    break;
-                case 'div':
-                    result = num1 / num2;
-                    break;
-            }
-            document.getElementById('result').innerText = 'Resultado: ' + result;
-        }
-    </script>
+      function calculate() {
+          const num1 = parseFloat(document.getElementById('num1').value);
+          const num2 = parseFloat(document.getElementById('num2').value);
+          const operation = document.getElementById('operation').value;
+          let result;
+          switch(operation) {
+              case 'sum':
+                  result = num1 + num2;
+                  break;
+              case 'sub':
+                  result = num1 - num2;
+                  break;
+              case 'mul':
+                  result = num1 * num2;
+                  break;
+              case 'div':
+                  result = num1 / num2;
+                  break;
+          }
+          document.getElementById('result').innerText = 'Resultado: ' + result;
+      }
+  </script>
 </head>
 
 <body>
-
     <div class="container py-4">
-  
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-          <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Calculadora Avanzada</h1>
-            <p class="col-md-8 fs-4">Aplicación de ejemplo para desplegar en nube que permite seleccionar una operación matematica (suma, resta, multiplicación o división) de dos numeros.</p>
-            <div class="mb-3">
-                <label for="num1" class="form-label">Número 1</label>
-                <input type="number" class="form-control" id="num1">
-            </div>
-            <div class="mb-3">
-                <label for="num2" class="form-label">Número 2</label>
-                <input type="number" class="form-control" id="num2">
-            </div>
-            <div class="mb-3">
-                <label for="operation" class="form-label">Operación</label>
-                <select class="form-select" id="operation">
-                    <option value="sum">Suma</option>
-                    <option value="sub">Resta</option>
-                    <option value="mul">Multiplicación</option>
-                    <option value="div">División</option>
-                </select>
-            </div>
-            <button class="btn btn-warning" onclick="calculate()">Calcular</button>
-            <p id="result" class="mt-3">Resultado:</p>
-            <button class="btn btn-warning btn-lg" type="button">
-                    Versión v2
-            </button>
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Calculadora Avanzada</h1>
+          <p class="col-md-8 fs-4">Aplicación de ejemplo para desplegar en nube que realiza una operación matematica (suma, resta, multiplicación o división) de dos numeros.</p>
+          <div class="mb-3">
+            <label for="num1" class="form-label">Número 1</label>
+            <input type="number" class="form-control" id="num1">
           </div>
+          <div class="mb-3">
+            <label for="num2" class="form-label">Número 2</label>
+            <input type="number" class="form-control" id="num2">
+          </div>
+          <div class="mb-3">
+            <label for="operation" class="form-label">Operación</label>
+            <select class="form-select" id="operation">
+              <option value="sum">Suma</option>
+              <option value="sub">Resta</option>
+              <option value="mul">Multiplicación</option>
+              <option value="div">División</option>
+            </select>
+          </div>
+          <button class="btn btn-warning" onclick="calculate()">Calcular</button>
+          <p id="result" class="mt-3">Resultado:</p>
+          <button class="btn btn-warning btn-lg" type="button">
+            Versión v2
+          </button>
         </div>
-
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
