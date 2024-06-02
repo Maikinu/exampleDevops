@@ -45,13 +45,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-      
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B47749F0D9E04E9A9599314C84DB06F6 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D0D1F79118D34759A7363306CF8C00BD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5D1A6833A5DD4A9494046C4426FE2C31 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -60,4 +53,4 @@ jobs:
           app-name: 'maikclass'
           slot-name: 'stage'
           package: '*.jar'
-          
+          publish-profile: ${{ secrets.UPSERVICES_PROFILE }}
