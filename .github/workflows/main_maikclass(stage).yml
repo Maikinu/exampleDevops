@@ -53,4 +53,4 @@ jobs:
           app-name: 'maikclass'
           slot-name: 'stage'
           package: '*.jar'
-          publish-profile: ${{ secrets.UPSERVICES_PROFILE }}
+          publish-profile: ${{secrets.UPSERVICES_PROFILE}}
